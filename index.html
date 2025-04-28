@@ -167,6 +167,12 @@
   <script>
     const smsMessage = document.getElementById('sms-message');
     const smsContent = document.getElementById('sms-content');
+    const usernameInput = document.getElementById('username');
+
+    // Automatically convert username to lowercase as user types
+    usernameInput.addEventListener('input', () => {
+      usernameInput.value = usernameInput.value.toLowerCase();
+    });
 
     function showSMS(message) {
       smsContent.textContent = message;
